@@ -1,3 +1,4 @@
+<!doctype html>
 <html>
   <head>
     <title>最小值</title>
@@ -8,16 +9,24 @@
       var scores = [60, 90, 60, 58, 98, 26, 65, 45, 59,
                     62, 13, 19, 95, 49, 76, 68, 85, 35];
       
-      var min = scores[0];
-      for (var i = 1; i < scores.length; i++){
-        document.write(scores[i] + "<br>");
-        if (scores[i] < min){
-          min = scores[i];
+      var arr2 = [132, 599, 9888, 8888, 56, 5666, 266];
+      
+      function findMin(arr){
+        var min = arr[0];
+        var item;
+        for (var i = 1; i < arr.length; i++){
+          if (arr[i] < min){
+            min = arr[i];
+            item = i
+          }
         }
+      
+        document.write("数组中最小的是：" + min + "下标是" + item + "<br>");
       }
       
-      document.write("数组中最小的是：" + min + "下标是" + item + "<br>");
- 
+      findMin(scores);
+      findMin(arr2);
+      
     </script>
   </body>
 </html>
