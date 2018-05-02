@@ -30,15 +30,24 @@
     }
 
     var fiat = {
-      make: 'Fiat',
+      make: 'fiat',
       model: '500',
       year: '1957',
       color: 'Medium Blue',
       drive: function () {
         alert("Zoom Zoom!!");
+      },
+      setColor: function () {
+        this,color = c;
+      },
+      getColor: function () {
+        return this.color;
       }
     }
-
+    
+    document.write(fiat.getColor() + "<br>");
+    fiat.setColor('golden');
+    document.write(fiat.getColor() + "<br>");
     //document.write(audi.make + "是" + audi.year + "年制造的<br>")
     //document.write(Bugatti.make + "是" + Bugatti.year + "年制造的<br>")
 
