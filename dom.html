@@ -7,16 +7,27 @@
   <title>Document</title>
   <script>
     function init() {
-      var obj = document.getElementById("title");
+      var h1obj = document.getElementById("title");
+      picobj = document.getElementById("pic")
+      h1obj.innerHTML = "P station picture";
+      h1obj.setAttribute("class","tit"); //setAttribute
+      picobj.getAttribute("alt");
+    }
 
-      alert(obj.innerHTML);
-      obj.innerHTML = "GOODBUY WORLD!!";
+    function changePicture() {
+      if (picobj.getAttribute("src") == "1.jpg") {
+        picobj.setAttribute("src","2.jpg");
+      } else {
+        picobj.setAttribute("src","1.jpg");
+      }
     }
 
     window.onload = init; //回调函数
   </script>
 </head>
 <body>
-  <h1 id="title">hello worid!</h1>
+  <h1 id="title">hello world!</h1>
+  <img id="pic" src="1.jpg" alt="图片">
+  <button onclick="changePicture()">换图@~@</button>
 </body>
 </html>
