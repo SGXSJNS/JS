@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script>
+    function init() {
+      var h1obj = document.getElementById("title");
+      picobj = document.getElementById("pic")
+      h1obj.innerHTML = "P station picture";
+      h1obj.setAttribute("class","tit"); //setAttribute
+      picobj.getAttribute("alt");
+    }
+
+    function changePicture() {
+      if (picobj.getAttribute("src") == "1.jpg") {
+        picobj.setAttribute("src","2.jpg");
+      } else {
+        picobj.setAttribute("src","1.jpg");
+      }
+    }
+
+    window.onload = init; //回调函数
+  </script>
+</head>
+<body>
+  <h1 id="title">hello world!</h1>
+  <img id="pic" src="1.jpg" alt="图片">
+  <button onclick="changePicture()">换图@~@</button>
+</body>
+</html>
